@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A.R.K Pre Owned Carz</title>
+<meta name="description" content="Affordable pre-owned cars with all paperwork authorised — A.R.K Pre Owned Carz.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600&display=swap">
+<style>
+:root{--bg:#07070b;--card:rgba(255,255,255,.05);--tx:#f3f3f7;--mu:#9a9aab;--red:#ff1e2d;--gold:#ffc83d;--bd:rgba(255,255,255,.12);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f4f8;--card:rgba(255,255,255,.75);--tx:#14141c;--mu:#5c5c6e;--bd:rgba(0,0,0,.12);color-scheme:light}}
+:root[data-theme="light"]{--bg:#f4f4f8;--card:rgba(255,255,255,.75);--tx:#14141c;--mu:#5c5c6e;--bd:rgba(0,0,0,.12);color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Inter,system-ui,sans-serif;overflow-x:hidden;
+background-image:radial-gradient(600px 400px at 85% -5%,rgba(255,30,45,.28),transparent),radial-gradient(500px 400px at 0% 30%,rgba(255,200,61,.12),transparent),linear-gradient(var(--bd) 1px,transparent 1px),linear-gradient(90deg,var(--bd) 1px,transparent 1px);background-size:auto,auto,48px 48px,48px 48px;background-attachment:fixed}
+.f{font-family:Orbitron,Inter,system-ui,sans-serif}
+nav{display:flex;align-items:center;gap:10px;padding:14px 18px;max-width:1000px;margin:auto}
+nav svg{width:34px;height:40px}nav b{letter-spacing:.14em;font-size:.9rem;flex:1}
+a.pill,button{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:9px 14px;border-radius:999px;text-decoration:none;font-size:.85rem;backdrop-filter:blur(10px)}
+button.p,a.p{background:linear-gradient(135deg,var(--red),#b00018);border:0;color:#fff;box-shadow:0 0 22px rgba(255,30,45,.45)}
+.hero{max-width:1000px;margin:auto;padding:46px 18px 24px;text-align:center}
+.hero h1{font-size:clamp(1.9rem,8vw,3.6rem);margin:0;line-height:1.05;background:linear-gradient(120deg,#fff,var(--gold) 55%,var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mu);max-width:520px;margin:14px auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.chips span{border:1px solid var(--bd);background:var(--card);border-radius:999px;padding:7px 13px;font-size:.78rem;backdrop-filter:blur(10px)}
+.chips span:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);margin-right:7px}
+main{max-width:1000px;margin:auto;padding:10px 18px 50px}
+.bar{display:flex;gap:10px;margin:18px 0}
+input,select{font:inherit;width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);backdrop-filter:blur(10px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.car{position:relative;border:1px solid var(--bd);background:var(--card);border-radius:18px;overflow:hidden;backdrop-filter:blur(12px);transition:.25s}
+.car:hover{transform:translateY(-4px);border-color:var(--red);box-shadow:0 10px 40px rgba(255,30,45,.25)}
+.car img,.ph{width:100%;height:170px;object-fit:cover;display:flex;align-items:center;justify-content:center;font-size:2.4rem;background:linear-gradient(135deg,#1a1a24,#2a1218)}
+.b{padding:14px}.b h3{margin:0 0 6px;font-size:1rem}
+.pr{font-size:1.2rem;font-weight:800;color:var(--gold)}
+.mu{color:var(--mu);font-size:.82rem}
+.tag{position:absolute;top:10px;left:10px;background:#000a;border:1px solid var(--bd);padding:4px 10px;border-radius:999px;font-size:.72rem}
+.sold{background:var(--red);border:0;color:#fff}
+.sold-img{filter:grayscale(1) brightness(.6)}
+.empty{grid-column:1/-1;text-align:center;color:var(--mu);padding:40px 0}
+.panel{border:1px solid var(--bd);background:var(--card);border-radius:18px;padding:16px;margin:16px 0;display:grid;gap:10px;backdrop-filter:blur(12px)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;border-bottom:1px solid var(--bd);padding:10px 0}
+footer{text-align:center;color:var(--mu);font-size:.78rem;padding:24px}
+
+.ov{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.72);backdrop-filter:blur(6px);display:flex;align-items:flex-end;justify-content:center;overflow-y:auto}
+.md{width:100%;max-width:640px;max-height:94vh;overflow-y:auto;background:var(--bg);border:1px solid var(--bd);border-radius:22px 22px 0 0;padding:16px;position:relative;margin-top:auto}
+@media(min-width:700px){.ov{align-items:center}.md{border-radius:22px}}
+.x{position:absolute;top:10px;right:10px;z-index:3;width:38px;height:38px;padding:0;border-radius:50%;background:#000a;color:#fff}
+.gal{position:relative}.gal img,.gal .ph{width:100%;height:260px;border-radius:14px}.gal .nv{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;padding:0;border-radius:50%;background:#000a;color:#fff}
+.th{display:flex;gap:6px;overflow-x:auto;margin:8px 0}.th img{width:64px;height:48px;object-fit:cover;border-radius:8px;border:2px solid transparent;cursor:pointer;flex:none}.th img.on{border-color:var(--red)}
+.cnt{position:absolute;right:10px;bottom:10px;background:#000a;color:#fff;border-radius:99px;padding:3px 9px;font-size:.72rem}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.acts .pill{display:inline-block}
+.prop{margin:22px auto 0;max-width:620px;border:2px solid var(--gold);border-radius:18px;padding:14px 16px;background:linear-gradient(135deg,rgba(255,200,61,.16),rgba(255,30,45,.1));box-shadow:0 0 30px rgba(255,200,61,.2);text-align:left;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.prop .bg{background:var(--gold);color:#000;font-weight:800;font-size:.68rem;letter-spacing:.16em;padding:3px 10px;border-radius:99px;display:inline-block}
+.prop h3{margin:6px 0 2px;font-size:1.05rem}
+.cb{position:relative}.cb .cc{background:var(--red);color:#fff;border-radius:99px;padding:1px 7px;font-size:.72rem;margin-left:4px}
+.it{display:flex;gap:10px;align-items:center;border-bottom:1px solid var(--bd);padding:10px 0}.it img,.it .ph{width:70px;height:52px;border-radius:8px;object-fit:cover;flex:none;font-size:1rem}
+.ad{max-width:420px;text-align:center;padding:22px}.ad .lb{position:absolute;top:12px;left:14px;font-size:.68rem;color:var(--mu);border:1px solid var(--bd);border-radius:6px;padding:1px 6px}
+.ad h2{margin:8px 0 4px}.ad .big{font-size:2rem;font-weight:800;color:var(--gold)}
+.thumbs{display:flex;gap:6px;flex-wrap:wrap}.thumbs img{width:56px;height:42px;object-fit:cover;border-radius:6px}
+textarea{font:inherit;width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx)}
+.ok{color:#3ddc84}.bp{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--bg);border-top:2px solid var(--gold);box-shadow:0 -10px 40px #0008;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;animation:up .5s ease}.bp .x2{position:absolute;top:6px;right:8px;width:30px;height:30px;padding:0;border-radius:50%}.bp .lb{position:absolute;top:8px;left:12px;font-size:.62rem;color:var(--mu);border:1px solid var(--bd);border-radius:5px;padding:0 5px}.bp>div:first-of-type{margin:14px 36px 0 0}@keyframes up{from{transform:translateY(100%)}to{transform:none}}.urg{color:#ff6b6b;font-size:.8rem;font-weight:600;margin-top:6px}.urg.a{color:var(--gold)}
+</style></head><body>
+<div id="app"></div><div id="ov"></div><div id="adv"></div>
+<script>
+(function(){
+var SB_URL='PASTE_YOUR_PROJECT_URL_HERE',SB_KEY='PASTE_YOUR_ANON_KEY_HERE';
+var app=document.getElementById('app'),ov=document.getElementById('ov'),adv=document.getElementById('adv');
+var cars=[],loaded=false,err='',q='',session=null,pend=[],view=null,taps=0,tt,adShown=false,busy=false;
+var PROP={name:'Mohammed Adil Khan Asad',num:'919885290284',show:'9885290284'};
+var AD={wa:'916302434203',site:'https://s-web-services.onrender.com/'};
+try{session=JSON.parse(localStorage.getItem('ark_sb')||'null')}catch(e){}
+var LOGO='<svg viewBox="0 0 76 88"><path d="M4 4h68v8H4z" fill="#ff1e2d"/><path d="M4 12h68v34c0 22-18 34-34 42C22 80 4 68 4 46z" fill="#ffc83d" stroke="#000" stroke-width="2"/><text x="38" y="58" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="28" fill="#000">ARK</text></svg>';
+function esc(s){var d=document.createElement('span');d.textContent=s==null?'':String(s);return d.innerHTML}
+function car(id){return cars.filter(function(c){return c.id===id})[0]}
+function title(c){return c.year+' '+c.make+' '+c.model}
+function wam(n,t){return 'https://wa.me/'+n+'?text='+encodeURIComponent(t)}
+function ready(){return SB_URL.indexOf('PASTE')<0&&SB_KEY.indexOf('PASTE')<0}
+/* ---------- Supabase helpers ---------- */
+async function api(path,o){o=o||{};var h=Object.assign({apikey:SB_KEY,Authorization:'Bearer '+(o.tok||SB_KEY)},o.headers||{});
+  var r=await fetch(SB_URL+path,{method:o.method||'GET',headers:h,body:o.body});if(!r.ok)throw new Error((await r.text())||r.status);var t=await r.text();return t?JSON.parse(t):null}
+function keep(s){session=s;try{s?localStorage.setItem('ark_sb',JSON.stringify(s)):localStorage.removeItem('ark_sb')}catch(e){}}
+async function auth(grant,body){var s=await api('/auth/v1/token?grant_type='+grant,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});keep({access_token:s.access_token,refresh_token:s.refresh_token,expires_at:s.expires_at});return session}
+async function tok(){if(!session)throw new Error('Not signed in');if(session.expires_at*1000<Date.now()+30000){try{await auth('refresh_token',{refresh_token:session.refresh_token})}catch(e){keep(null);throw new Error('Session expired — sign in again')}}return session.access_token}
+async function loadCars(){try{cars=(await api('/rest/v1/cars?select=*&order=created_at.desc')).map(function(c){c.photos=c.photos||[];return c});err=''}catch(e){err='Could not load cars. Please refresh.'}loaded=true}
+async function upload(blob){var t=await tok(),n=(window.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(16).slice(2))+'.jpg';
+  var r=await fetch(SB_URL+'/storage/v1/object/car-photos/'+n,{method:'POST',headers:{apikey:SB_KEY,Authorization:'Bearer '+t,'Content-Type':'image/jpeg'},body:blob});if(!r.ok)throw new Error(await r.text());return SB_URL+'/storage/v1/object/public/car-photos/'+n}
+function toBlob(f){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var w=Math.min(960,im.width),cv=document.createElement('canvas');cv.width=w;cv.height=im.height*w/im.width;cv.getContext('2d').drawImage(im,0,0,cv.width,cv.height);cv.toBlob(function(b){b?res(b):rej()},'image/jpeg',.78)};im.onerror=rej;im.src=r.result};r.onerror=rej;r.readAsDataURL(f)})}
+async function files(list){var o=[];for(var i=0;i<list.length;i++){try{var b=await toBlob(list[i]);o.push({blob:b,url:URL.createObjectURL(b)})}catch(e){}}return o}
+/* ---------- public site ---------- */
+function enq(c){return '<a class="pill p" target="_blank" rel="noopener" href="'+wam(PROP.num,'Hello '+PROP.name+', I am interested in this car listed on A.R.K Pre Owned Carz:\n\n'+title(c)+'\nPrice: '+c.price+'\nKm driven: '+c.km+' km\n\nIs it still available? Please share more details.')+'">Enquire on WhatsApp</a>'}
+function urg(c){if(c.sold)return '';var a=[];if(c.created_at&&Date.now()-new Date(c.created_at)<6048e5)a.push('<div class="urg a">✨ New arrival</div>');a.push('<div class="urg">⏳ Limited stock — enquire before it is gone</div>');return a.join('')}
+function cardH(c){var p=c.photos;return '<div class="car"><span class="tag'+(c.sold?' sold':'')+'">'+(c.sold?'SOLD':'PAPERWORK READY')+'</span><div data-act="open" data-id="'+esc(c.id)+'" style="cursor:pointer;position:relative">'+(p.length?'<img'+(c.sold?' class="sold-img"':'')+' src="'+esc(p[0])+'" alt="">':'<div class="ph">🏎️</div>')+(p.length>1?'<span class="cnt">'+p.length+' photos</span>':'')+'</div><div class="b"><h3 class="f">'+esc(title(c))+'</h3><div class="pr">'+esc(c.price)+'</div><div class="mu">'+esc(c.km)+' km</div>'+urg(c)+'<div class="acts"><button data-act="open" data-id="'+esc(c.id)+'">Details</button>'+(c.sold?'':enq(c))+'</div></div></div>'}
+function propH(){return '<div class="prop"><div><span class="bg">PROPRIETOR</span><h3 class="f">'+PROP.name+'</h3><div class="mu">'+PROP.show+'</div></div><div class="acts" style="margin:0"><a class="pill" href="tel:+'+PROP.num+'">Call</a><a class="pill p" target="_blank" rel="noopener" href="'+wam(PROP.num,'Hi '+PROP.name+', I have a question about A.R.K Pre Owned Carz.')+'">WhatsApp</a></div></div>'}
+function nav(a){return '<nav><span data-act="logo">'+LOGO+'</span><b class="f">A.R.K PRE OWNED CARZ</b>'+(a?'<a class="pill" href="#">View public site</a>':'')+'</nav>'}
+function pub(){
+  var l=cars.filter(function(c){return (c.make+' '+c.model+' '+c.year).toLowerCase().indexOf(q)>-1});
+  var body=!loaded?'<div class="empty">Loading cars…</div>':err?'<div class="empty">'+err+'</div>':l.length?l.map(cardH).join(''):'<div class="empty">'+(cars.length?'No matches.':'New cars arriving soon.')+'</div>';
+  app.innerHTML=nav(false)+'<section class="hero"><h1 class="f">DRIVE YOUR NEXT<br>DREAM FOR LESS</h1><p>Quality pre‑owned cars at honest prices. Every vehicle comes with clean, authorised paperwork.</p><div class="chips"><span>Authorised dealer</span><span>All paperwork authorised</span><span>Affordable prices</span></div>'+propH()+'</section><main><div class="bar"><input id="s" placeholder="Search make, model or year…" value="'+esc(q)+'"></div><div class="grid">'+body+'</div></main><footer><b>Proprietor:</b> '+PROP.name+' · '+PROP.show+'<br>© A.R.K Pre Owned Carz · Authorised dealer</footer>';
+  var s=document.getElementById('s');s.oninput=function(){q=s.value.toLowerCase();var p=s.selectionStart;pub();var n=document.getElementById('s');n.focus();n.setSelectionRange(p,p)};
+}
+function close(){ov.innerHTML='';view=null}
+function modal(inner){ov.innerHTML='<div class="ov" data-act="bg"><div class="md"><button class="x" data-act="close">✕</button>'+inner+'</div></div>'}
+function detail(id,i){var c=car(id);if(!c)return;var p=c.photos,n=p.length;i=n?(i+n)%n:0;view={id:id,i:i};
+  modal('<div class="gal">'+(n?'<img src="'+esc(p[i])+'" alt="">':'<div class="ph">🏎️</div>')+(n>1?'<button class="nv" style="left:8px" data-act="prev">‹</button><button class="nv" style="right:8px" data-act="next">›</button>':'')+'</div>'+(n>1?'<div class="th">'+p.map(function(x,k){return '<img data-act="pic" data-k="'+k+'" class="'+(k===i?'on':'')+'" src="'+esc(x)+'">'}).join('')+'</div>':'')+'<h2 class="f" style="margin:10px 0 4px">'+esc(title(c))+(c.sold?' · SOLD':'')+'</h2><div class="pr">'+esc(c.price)+'</div><div class="mu">'+esc(c.km)+' km · All paperwork authorised</div>'+urg(c)+'<div class="acts">'+(c.sold?'':enq(c))+'</div>');}
+function ad(){if(adShown||location.hash==='#admin')return;adShown=true;try{if(sessionStorage.getItem('ark_ad'))return;sessionStorage.setItem('ark_ad','1')}catch(e){}
+  adv.innerHTML='<div class="bp"><button class="x2" data-act="adx" aria-label="Close">✕</button><div><b>Do you like this website? 😊</b><div class="mu">If yes, we can build one for your business too — at affordable prices.</div></div><div class="acts" style="margin:0"><a class="pill p" target="_blank" rel="noopener" href="'+wam(AD.wa,'Hi, I like the A.R.K Pre Owned Carz website. I want one for my business at an affordable price.')+'">Yes, I want one</a><a class="pill" target="_blank" rel="noopener" href="'+AD.site+'">See our work</a></div></div>'}
+/* ---------- owner area ---------- */
+function login(m){app.innerHTML=nav(true)+'<main><div class="panel" style="max-width:420px;margin:30px auto"><h3 class="f" style="margin:0">Owner sign-in</h3><p class="mu">Private area for the owner / proprietor.</p><input id="le" type="email" placeholder="Email" autocomplete="username"><input id="lp" type="password" placeholder="Password" autocomplete="current-password"><button class="p" data-act="login">Sign in</button>'+(m?'<div style="color:#ff6b6b">'+esc(m)+'</div>':'')+'</div></main>'}
+function adm(){
+  if(!ready()){app.innerHTML=nav(true)+'<main><div class="panel"><h3 class="f">Setup needed</h3><p class="mu">Paste your Supabase Project URL and anon key at the top of the script in index.html.</p></div></main>';return}
+  if(!session){login();return}
+  app.innerHTML=nav(true)+'<main><div class="row" style="border:0"><h2 class="f" style="margin:0">Lister dashboard</h2><button data-act="logout">Sign out</button></div><p class="mu">Changes go live instantly for every visitor.</p><div class="panel"><h3 class="f" style="margin:0">Add a car</h3><input id="fm" placeholder="Make" required><input id="fo" placeholder="Model"><input id="fy" placeholder="Year"><input id="fk" placeholder="Kilometres driven"><input id="fp" placeholder="Price"><label class="mu">Photos (select several)</label><input type="file" id="ph" accept="image/*" multiple><div class="thumbs" id="tb">'+pend.map(function(x){return '<img src="'+x.url+'">'}).join('')+'</div><button class="p" data-act="addcar">'+(busy?'Publishing…':'Publish car')+'</button></div><div class="panel"><h3 class="f" style="margin:0">Listings ('+cars.length+')</h3>'+(cars.map(function(c){return '<div class="row"><span>'+esc(title(c))+' · '+esc(c.price)+' · '+c.photos.length+' photo(s)'+(c.sold?' · SOLD':'')+'</span><span><button data-act="ap" data-id="'+esc(c.id)+'">Add photos</button> <button data-act="sold" data-id="'+esc(c.id)+'">'+(c.sold?'Unmark sold':'Mark sold')+'</button> <button data-act="del" data-id="'+esc(c.id)+'">Remove</button></span></div>'}).join('')||'<p class="mu">No cars yet.</p>')+'</div></main>';
+  document.getElementById('ph').onchange=async function(e){pend=pend.concat(await files(e.target.files));document.getElementById('tb').innerHTML=pend.map(function(x){return '<img src="'+x.url+'">'}).join('')};
+}
+async function run(fn){if(busy)return;busy=true;try{await fn();await loadCars()}catch(e){alert('Failed: '+(e.message||e).toString().slice(0,200))}busy=false;adm()}
+document.addEventListener('click',function(e){
+  var t=e.target.closest('[data-act]');if(!t)return;var a=t.getAttribute('data-act'),id=t.getAttribute('data-id');
+  if(a==='bg'){if(e.target!==t)return;a='close'}
+  if(a==='logo'){taps++;clearTimeout(tt);tt=setTimeout(function(){taps=0},2000);if(taps>=5){taps=0;location.hash='admin'}}
+  else if(a==='open')detail(id,0);else if(a==='close')close();else if(a==='adx')adv.innerHTML='';
+  else if(a==='prev')detail(view.id,view.i-1);else if(a==='next')detail(view.id,view.i+1);else if(a==='pic')detail(view.id,+t.getAttribute('data-k'));
+  else if(a==='login'){var em=document.getElementById('le').value.trim(),pw=document.getElementById('lp').value;auth('password',{email:em,password:pw}).then(adm).catch(function(){login('Wrong email or password.')})}
+  else if(a==='logout'){keep(null);adm()}
+  else if(a==='addcar'){var m=document.getElementById('fm').value.trim(),o=document.getElementById('fo').value.trim(),y=document.getElementById('fy').value.trim(),k=document.getElementById('fk').value.trim(),p=document.getElementById('fp').value.trim();if(!m||!p){alert('Make and price are required.');return}
+    run(async function(){var urls=[];for(var i=0;i<pend.length;i++)urls.push(await upload(pend[i].blob));var tk=await tok();await api('/rest/v1/cars',{method:'POST',tok:tk,headers:{'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({make:m,model:o,year:y,km:k,price:p,photos:urls})});pend=[]})}
+  else if(a==='sold'){var c=car(id);run(async function(){await api('/rest/v1/cars?id=eq.'+id,{method:'PATCH',tok:await tok(),headers:{'Content-Type':'application/json'},body:JSON.stringify({sold:!c.sold})})})}
+  else if(a==='del'){if(confirm('Remove this car?'))run(async function(){await api('/rest/v1/cars?id=eq.'+id,{method:'DELETE',tok:await tok()})})}
+  else if(a==='ap'){var inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.multiple=true;inp.onchange=function(){run(async function(){var fl=await files(inp.files),c=car(id),urls=c.photos.slice();for(var i=0;i<fl.length;i++)urls.push(await upload(fl[i].blob));await api('/rest/v1/cars?id=eq.'+id,{method:'PATCH',tok:await tok(),headers:{'Content-Type':'application/json'},body:JSON.stringify({photos:urls})})})};inp.click()}
+});
+function route(){close();if(location.hash==='#admin')adm();else pub()}
+window.addEventListener('hashchange',route);route();
+if(ready())loadCars().then(route);else{loaded=true;err='Site is not connected to its database yet.';route()}
+setTimeout(ad,8000);
+})();
+</script>
+</body></html>
