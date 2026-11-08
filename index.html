@@ -63,7 +63,7 @@ textarea{font:inherit;width:100%;padding:12px 14px;border-radius:12px;border:1px
 <div id="app"></div><div id="ov"></div><div id="adv"></div>
 <script>
 (function(){
-var SB_URL='PASTE_YOUR_PROJECT_URL_HERE',SB_KEY='PASTE_YOUR_ANON_KEY_HERE';
+var SB_URL='https://wtxyfxgtajsznstpzibc.supabase.co',SB_KEY='sb_publishable_BnCamyVLdL6SeIdxrju0ZA_uXbO0uZ9';
 var app=document.getElementById('app'),ov=document.getElementById('ov'),adv=document.getElementById('adv');
 var cars=[],loaded=false,err='',q='',session=null,pend=[],view=null,taps=0,tt,adShown=false,busy=false;
 var PROP={name:'Mohammed Adil Khan Asad',num:'919885290284',show:'9885290284'};
@@ -76,7 +76,7 @@ function title(c){return c.year+' '+c.make+' '+c.model}
 function wam(n,t){return 'https://wa.me/'+n+'?text='+encodeURIComponent(t)}
 function ready(){return SB_URL.indexOf('PASTE')<0&&SB_KEY.indexOf('PASTE')<0}
 /* ---------- Supabase helpers ---------- */
-async function api(path,o){o=o||{};var h=Object.assign({apikey:SB_KEY,Authorization:'Bearer '+(o.tok||SB_KEY)},o.headers||{});
+async function api(path,o){o=o||{};var h=Object.assign({apikey:SB_KEY},o.tok?{Authorization:'Bearer '+o.tok}:{},o.headers||{});
   var r=await fetch(SB_URL+path,{method:o.method||'GET',headers:h,body:o.body});if(!r.ok)throw new Error((await r.text())||r.status);var t=await r.text();return t?JSON.parse(t):null}
 function keep(s){session=s;try{s?localStorage.setItem('ark_sb',JSON.stringify(s)):localStorage.removeItem('ark_sb')}catch(e){}}
 async function auth(grant,body){var s=await api('/auth/v1/token?grant_type='+grant,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});keep({access_token:s.access_token,refresh_token:s.refresh_token,expires_at:s.expires_at});return session}
